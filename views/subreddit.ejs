@@ -1,0 +1,21 @@
+<%- include('partials/head') %> 
+  <body class="has-background-primary-light">
+<%- include('partials/navbar') %> 
+    <div class="container has-background-white is-max-desktop">
+      <h1>Browsing the <%= name %> subreddit</h1>
+      <h2><%= description %></h2>
+      <p><%= subscribers %> Total Subscribers</p>
+      <hr />
+      <% for(let post of posts) { %>
+      <article>
+        <p><%= post.title %> - <b><%= post.author %></b></p>
+      </article>
+      <% if(post.img) { %>
+      <img src="<%= post.img %> " alt="" />
+      <% } %> <% } %>
+    </div>
+    <%- include('partials/footer') %> 
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
