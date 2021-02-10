@@ -33,6 +33,6 @@ app.get("/rand", (req, res) => {
   res.render("random", { num });
 });
 
-app.listen(3000, () => {
+app.listen("https://oeanwells.github.io/fake-reddit/", () => {
   console.log("Listening on port 3000");
 });
